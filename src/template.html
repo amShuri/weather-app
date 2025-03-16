@@ -5,5 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <h1>Weather Forecast</h1>
+
+      <form novalidate>
+        <label for="location" aria-hidden="true">Location:</label>
+        <input type="text" name="location" id="location" required />
+        <button type="submit">Search</button>
+      </form>
+    </nav>
+
+    <main>
+      <div>
+        <h2 class="italic" id="location-name">Location</h2>
+
+        <div class="card-container" id="card-container">
+          <div class="card">
+            <h2 class="card-title">Weekday</h2>
+
+            <img class="card-img" width="150" height="150" alt="" />
+            <p class="card-condition italic">Clear Day</p>
+
+            <div class="separator"></div>
+
+            <div class="card-details">
+              <p class="temperature">27ºC</p>
+              <p class="date">MM DD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
