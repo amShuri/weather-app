@@ -20,6 +20,7 @@ async function handleFormSubmit(e) {
   }
 
   createWeatherCard(weatherData);
+  search.setCustomValidity('');
   search.value = '';
   search.focus();
 }
