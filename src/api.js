@@ -1,7 +1,7 @@
 import { formatWeatherData } from './utility.js';
 
 export async function getWeatherData(location) {
-  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=[KEYHERE]&contentType=json`;
+  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=F93ZWDVSZHMGXQAFLLBC3MQ7E&contentType=json`;
 
   try {
     const response = await fetch(url);
