@@ -9,7 +9,7 @@ export function createWeatherCard(weatherData) {
    * first, so that we can exit the loop early when iteration through the
    * property 'address'.
    */
-  locationTitle.textContent = weatherData.address;
+  locationTitle.textContent = 'Location: ' + weatherData.address;
   cardContainer.innerHTML = '';
 
   Object.entries(weatherData).forEach(([key, data]) => {
