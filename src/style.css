@@ -7,17 +7,17 @@
 }
 
 body {
-  background: rgb(241, 188, 154);
   background: linear-gradient(
     180deg,
-    rgba(241, 188, 154, 1) 0%,
-    rgba(136, 114, 168, 1) 100%
+    rgb(132, 187, 221) 0%,
+    rgba(173, 216, 230, 1) 50%,
+    rgb(226, 247, 255) 100%
   );
   font-family: 'Quicksand', sans-serif;
 
+  margin: 0 auto;
   min-height: 100vh;
   max-width: 1200px;
-  margin: 0 auto;
   padding: 0 1.5rem;
 }
 
@@ -25,10 +25,10 @@ h1 {
   font-size: 2.5rem;
 }
 
+h2,
 nav,
 input,
-button,
-.card-title {
+button {
   font-family: 'Rajdhani', sans-serif;
 }
 
@@ -38,31 +38,69 @@ nav {
   align-items: center;
 }
 
-nav input,
-nav button {
-  padding: 0.35rem 0.45rem;
-  font-size: 1.05rem;
-}
-
-button {
-  cursor: pointer;
-}
-
 [aria-hidden='true'] {
   display: none;
 }
 
+/* Start Search Input & Button Styles */
+input,
+input + button {
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  height: 2.8rem;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid rgba(20, 60, 90, 0.5);
+  color: rgb(0, 58, 93);
+  outline: none;
+  padding: 0 1rem;
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  border-color: #003a5d;
+  box-shadow: 0 4px 8px rgba(0, 58, 93, 0.2);
+}
+
+input + button {
+  background: linear-gradient(180deg, #003a5d, #005580);
+  border: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0 1.25rem;
+}
+
+input + button:hover {
+  background: linear-gradient(180deg, #005580, #0077a8);
+  box-shadow: 0 4px 8px rgba(0, 58, 93, 0.3);
+}
+
+input + button:active {
+  transform: scale(0.95);
+}
+/* End Search Input & Button Styles*/
+
+/* Start General Styles */
 .main-title,
 .location-name {
-  color: rgb(61, 55, 55);
+  color: rgb(1, 65, 105);
 }
 
 .location-name {
   font-size: 1.85rem;
   margin: 0.75rem 0;
   font-weight: 400;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
+/* End General Styles */
 
+/* Start Card Styles */
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -70,8 +108,10 @@ button {
 }
 
 .card {
-  background-color: #f8f6f9;
-  border-radius: 6px;
+  background-color: rgba(240, 248, 255, 0.85);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
 
   display: flex;
   justify-content: start;
@@ -90,23 +130,23 @@ button {
 }
 
 .card-title {
-  background-color: #ddd5e0;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  letter-spacing: 2px;
+  background-color: rgba(173, 216, 230, 0.4);
   text-transform: uppercase;
-
   padding: 0.45rem 0;
   width: 100%;
+  color: #004466;
+  font-weight: bold;
 }
 
 .card-condition {
   font-size: 0.85rem;
   margin-bottom: 0.45rem;
   text-transform: capitalize;
+  color: #004466;
 }
 
 .card-details {
+  color: #003366;
   padding: 0.45rem 0;
 }
 
@@ -119,12 +159,13 @@ button {
 .card-details .date {
   font-size: 1.15rem;
 }
+/* End Card Styles */
 
-/* Utilities */
+/* Start Utilities */
 .separator {
   width: 80%;
   height: 1px;
-  background-color: hsl(284, 15%, 75%);
+  background-color: rgba(173, 200, 230, 0.75);
 }
 
 .italic {
@@ -134,3 +175,4 @@ button {
 .underline {
   text-decoration: underline;
 }
+/* End Utilities */
