@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kode+Mono&family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&family=Quicksand');
 
 * {
   margin: 0;
@@ -13,7 +13,7 @@ body {
     rgba(241, 188, 154, 1) 0%,
     rgba(136, 114, 168, 1) 100%
   );
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 
   min-height: 100vh;
   max-width: 1200px;
@@ -21,17 +21,31 @@ body {
   padding: 0 1.5rem;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
+nav,
+input,
+button,
+.card-title {
+  font-family: 'Rajdhani', sans-serif;
+}
+
 nav {
   display: flex;
   flex-direction: column;
-
   align-items: center;
 }
 
 nav input,
 nav button {
-  padding: 0.35rem;
+  padding: 0.35rem 0.45rem;
   font-size: 1.05rem;
+}
+
+button {
+  cursor: pointer;
 }
 
 [aria-hidden='true'] {
@@ -44,8 +58,9 @@ nav button {
 }
 
 .location-name {
+  font-size: 1.85rem;
   margin: 0.75rem 0;
-  text-align: center;
+  font-weight: 400;
 }
 
 .card-container {
@@ -78,8 +93,7 @@ nav button {
   background-color: #ddd5e0;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  font-family: 'Kode Mono', monospace;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   text-transform: uppercase;
 
   padding: 0.45rem 0;
@@ -115,4 +129,8 @@ nav button {
 
 .italic {
   font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
 }
