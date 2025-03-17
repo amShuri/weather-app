@@ -1,3 +1,5 @@
+import weatherIcons from './weather_icons';
+
 const locationTitle = document.getElementById('location-name');
 const cardContainer = document.getElementById('card-container');
 
@@ -12,7 +14,9 @@ export function createWeatherCard(weatherData) {
 
   Object.entries(weatherData).forEach(([key, data]) => {
     if (key === 'address') return;
+
     const weatherCondition = data.icon;
+    const formattedWeatherCondition = data.icon.replaceAll('-', ' ');
     const temperature = data.temp;
     const day = data.datetime.day;
     const weekday = data.datetime.weekday;
@@ -26,10 +30,11 @@ export function createWeatherCard(weatherData) {
 
             <img 
               class="card-img"
+              src="${weatherIcons[weatherCondition]}"
               width="150"
               height="150"
             >
-            <p class="card-condition">${weatherCondition}</p>
+            <p class="card-condition">${formattedWeatherCondition}</p>
 
 
             <div class="separator"></div>

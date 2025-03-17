@@ -15,15 +15,11 @@ function formatDate(datetime) {
   };
 }
 
-function formatWeatherCondition(dayIcon) {
-  return dayIcon.replaceAll('-', ' ');
-}
-
 export function formatWeatherData(weatherObj) {
   const currentConditions = weatherObj.days.slice(1, 8).map((day) => {
     return {
       temp: day.temp,
-      icon: formatWeatherCondition(day.icon),
+      icon: day.icon,
       datetime: formatDate(day.datetime),
     };
   });

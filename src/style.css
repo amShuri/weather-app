@@ -37,6 +37,12 @@ nav button {
   display: none;
 }
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
 .card {
   background-color: #f8f6f9;
   border-radius: 6px;
@@ -45,8 +51,6 @@ nav button {
   justify-content: start;
   align-items: center;
   flex-direction: column;
-
-  width: 220px;
 }
 
 .card-title,
@@ -74,6 +78,7 @@ nav button {
 .card-condition {
   font-size: 0.85rem;
   margin-bottom: 0.45rem;
+  text-transform: capitalize;
 }
 
 .card-details {
