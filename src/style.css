@@ -31,10 +31,21 @@ nav {
 nav input,
 nav button {
   padding: 0.35rem;
+  font-size: 1.05rem;
 }
 
 [aria-hidden='true'] {
   display: none;
+}
+
+.main-title,
+.location-name {
+  color: rgb(61, 55, 55);
+}
+
+.location-name {
+  margin: 0.75rem 0;
+  text-align: center;
 }
 
 .card-container {
