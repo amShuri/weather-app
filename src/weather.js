@@ -8,11 +8,12 @@ async function handleFormSubmit(e) {
   if (search.validity.valueMissing) {
     search.setCustomValidity('You must provide a location');
     search.reportValidity();
-    search.focus();
     return;
   }
 
   createWeatherCard(await getWeatherData(search.value));
+  search.value = '';
+  search.focus();
 }
 
 document.querySelector('form').addEventListener('submit', handleFormSubmit);
